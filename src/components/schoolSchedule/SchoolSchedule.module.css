@@ -1,0 +1,75 @@
+.container {
+    max-width: 1600px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+.scheduleWrapper, .classIdsWrapper, .daysWrapper, .schoolDayWrapper {
+    display: grid;
+}
+
+.schoolDayWrapper, .classIdsWrapper, .daysWrapper {
+    gap: var(--table-spacing);
+}
+
+.scheduleWrapper {
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 70px auto;
+    grid-template-rows: auto repeat(5, auto);
+    overflow: auto;
+    border: 1px solid black;
+    position: relative;
+}
+
+.plug, .classIdsWrapper {
+    color: white;
+    background-color: black;
+}
+
+.classIdsWrapper, .daysWrapper {
+    user-select: none;
+    font-size: 20px;
+}
+
+.daysWrapper, .schoolDayWrapper {
+    grid-template-rows: repeat(5, var(--table-item-height));
+}
+
+.daysWrapper {
+    position: sticky;
+    left: 0;
+}
+
+.plug {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.classIdsWrapper {
+    grid-auto-flow: column;
+    grid-auto-columns: var(--table-item-width);
+    justify-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: var(--table-spacing);
+}
+
+.daysWrapper {
+    padding: var(--table-spacing) 0;
+}
+
+.schoolDayWrapper {
+    grid-auto-columns: var(--table-item-width);
+    grid-auto-flow: column;
+    padding: var(--table-spacing);
+}
+
+.dayMarker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

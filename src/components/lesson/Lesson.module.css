@@ -1,0 +1,48 @@
+.lessonSlot {
+    cursor: grab;
+    user-select: none;
+    height: 40px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.lessonSlot.dragOver {
+    background-color: #d2d2d2;
+    transition: 0.3s;
+}
+
+.lessonContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.lessonContent.transparent {
+    opacity: 60%;
+}
+
+.lessonName, .classRoomNumber {
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    background-color: white;
+}
+
+.lessonName {
+    flex-grow: 1;
+}
+
+.lessonNumber {
+    margin-right: 4px;
+}
+
+.classRoomNumber {
+    width: 44px;
+    margin-left: 8px;
+    justify-content: center;
+}
